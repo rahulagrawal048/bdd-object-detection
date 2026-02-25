@@ -1,0 +1,51 @@
+# Large files and checkpoints
+*.pth
+*.pt
+*.onnx
+*.weights
+
+# Dataset dirs (BDD images, COCO exports; large)
+datasets/
+
+# Training and eval outputs
+runs/
+eval_viz/
+eval_output/
+output/
+checkpoints/
+
+# Analysis cache (pickle, written to BDD root)
+.bdd_analysis_cache*.pkl
+
+# FiftyOne
+.fiftyone/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

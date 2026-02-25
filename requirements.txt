@@ -1,0 +1,13 @@
+pandas>=1.3.0
+numpy>=1.20.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+streamlit>=1.28.0
+torch>=1.9.0
+torchvision>=0.10.0
+Pillow>=8.0.0
+opencv-python-headless>=4.5.0
+rfdetr>=1.4.0
+pycocotools>=2.0.0
+fiftyone>=0.26.0
+tensorboard>=2.10.0

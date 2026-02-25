@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bdd-object-detection"
+version = "0.1.0"
+description = "BDD100K object detection dataset analysis"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311"]
+include = '\.pyi?$'
+exclude = '''
+/(\.git|\.hg|\.mypy_cache|__pycache__|build|dist)/
+'''
+
+[tool.pylint.messages_control]
+disable = [
+    "C0114",  # missing-module-docstring (we have module docstrings where needed)
+    "C0115",  # missing-class-docstring
+    "C0116",  # missing-function-docstring
+    "R0903",  # too-few-public-methods
+    "W0212",  # protected-access (for _normalize_category)
+]
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "ex", "Run", "_", "id", "df", "cat", "fl", "d", "w", "x", "ax", "fig"]

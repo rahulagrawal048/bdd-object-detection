@@ -1,0 +1,12 @@
+.git
+__pycache__
+*.pyc
+.pylintrc
+.mypy_cache
+output
+*.md
+!README.md
+docs
+.env
+.venv
+venv

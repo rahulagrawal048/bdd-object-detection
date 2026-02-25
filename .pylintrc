@@ -1,0 +1,16 @@
+[MASTER]
+ignore=CVS,.git,__pycache__,.mypy_cache,build,dist
+jobs=0
+suggestion-mode=yes
+
+[MESSAGES CONTROL]
+disable=C0114,C0115,C0116,R0903,W0212
+
+[FORMAT]
+max-line-length=100
+
+[BASIC]
+good-names=i,j,k,ex,Run,_,id,df,cat,fl,d,w,x,ax,fig
+
+[DESIGN]
+max-args=7

@@ -1,0 +1,38 @@
+# BDD object detection analysis - self-contained runs.
+# Mount your BDD dataset at ./data (or set BDD_DATA_PATH) and optionally ./output for plots.
+
+services:
+  # Run one-off analysis and generate plots. Output written to ./output if mounted.
+  analysis:
+    build: .
+    image: bdd-analysis:latest
+    volumes:
+      - ${BDD_DATA_PATH:-./data}:/data:ro
+      - ${OUTPUT_PATH:-./output}:/output
+    command: >
+      python -m data_analysis.run_analysis
+      --bdd-root /data
+      --plots
+      --out-dir /output
+
+  # Streamlit dashboard. Open http://localhost:8501 and set BDD root to /data in sidebar.
+  dashboard:
+    build: .
+    image: bdd-analysis:latest
+    ports:
+      - "8501:8501"
+    volumes:
+      - ${BDD_DATA_PATH:-./data}:/data:ro
+    command: streamlit run data_analysis/dashboard.py --server.address 0.0.0.0 --server.port 8501
+    environment:
+      - BDD_ROOT=/data
+
+  # CLI only (no plots). Use: docker compose run cli
+  cli:
+    build: .
+    image: bdd-analysis:latest
+    volumes:
+      - ${BDD_DATA_PATH:-./data}:/data:ro
+    command: python -m data_analysis.run_analysis --bdd-root /data
+    profiles:
+      - cli
