@@ -56,3 +56,24 @@ The 10 object detection classes (canonical names used in this repo) are:
 
 Category aliases (e.g. `person` → `pedestrian`, `bike` → `bicycle`, `motor` → `motorcycle`) are applied in the parser so all detection objects are counted under these 10 classes.
 
+## 2. Data Analysis
+
+### 2.1 Class Distribution
+
+![Class Distribution](images/class_dist.png)  
+
+### 2.2 Box Area by class
+
+![Box Area](images/box_area_by_class.png) 
+
+### 2.3 Aspect Ratio by class
+
+![Aspect Ratio](images/aspect_ratio_by_class.png) 
+
+### 2.4 Occlusion and Truncation
+
+![Occlusion](images/occlusion_truncation.png) 
+
+### 2.5 Interesting samples
+
+![samples](images/ped-incorrect-label.png) 
