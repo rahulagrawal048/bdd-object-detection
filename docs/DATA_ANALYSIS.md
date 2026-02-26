@@ -77,3 +77,7 @@ Category aliases (e.g. `person` → `pedestrian`, `bike` → `bicycle`, `motor` 
 ### 2.5 Interesting samples
 
 ![samples](images/ped-incorrect-label.png) 
+*Incorrect annotation of a car as pedestrian*
+
+![sample-2](images/cycle.png) 
+*Largest cycle label is a rickshaw*
